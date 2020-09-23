@@ -1,15 +1,15 @@
-﻿using Store.Web.StoreWS;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 
 namespace Store.Web.Controllers
 {
     public class OrderController : Controller
     {
+        public ActionResult Index()
+        {
+            return View("Import");
+        }
+
         // GET: Order
         public ActionResult Import(HttpPostedFileBase file)
         {
@@ -17,6 +17,6 @@ namespace Store.Web.Controllers
             //client.Example();
 
             return View();
-        }        
+        }
     }
 }
