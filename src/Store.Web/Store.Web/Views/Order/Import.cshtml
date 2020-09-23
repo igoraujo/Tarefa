@@ -1,9 +1,21 @@
-﻿
-
-@{
+﻿@{
     ViewBag.Title = "Import";
 }
 
-<h2>Import</h2>
+<h2>Importar Arquivo</h2>
 
 
+@using (Html.BeginForm("Import", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <section id="order">
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <input class="form-control" type="file" name="file" style="width: 100%" />
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="Importar" class="btn btn-success" style="width: 100%" />
+            </div>
+        </div>
+    </section>
+}
