@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\ClientStatus.cs" />
+    <Compile Include="Models\Mapping\OrderItemMap.cs" />
     <Compile Include="Models\OrderItem.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Mapping\ProductMap.cs" />
