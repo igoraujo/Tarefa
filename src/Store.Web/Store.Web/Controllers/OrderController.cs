@@ -11,7 +11,7 @@ namespace Store.Web.Controllers
     public class OrderController : Controller
     {
         // GET: Order
-        public ActionResult import(HttpPostedFileBase file)
+        public ActionResult Import(HttpPostedFileBase file)
         {
             //var client = new ServiceSoapClient();
             //client.Example();
