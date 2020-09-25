@@ -15,16 +15,16 @@ namespace Store.Ws
     public class Service : System.Web.Services.WebService
     {
         private IImportService _importService;
-        
+
         public Service()
         {
             _importService = DependencyResolver.Current.GetService<IImportService>();
-        }       
+        }
 
         [WebMethod]
-        public void Example()
+        public void ImportFile(string filePath)
         {
-            _importService.Example();
+            _importService.ImportFile(filePath);
         }
     }
 }
