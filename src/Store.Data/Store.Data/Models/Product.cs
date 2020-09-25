@@ -11,5 +11,6 @@ namespace Store.Data.Models
 
         public Guid ProductId { get; set; }
         public string Name { get; set; }
+        public virtual OrderItem OrderItem { get; set; }
     }
 }

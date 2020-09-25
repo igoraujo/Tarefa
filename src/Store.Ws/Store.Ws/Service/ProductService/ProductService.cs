@@ -2,6 +2,7 @@
 using StoreWS.UnitOfWork;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StoreWS.Service
 {
@@ -51,6 +52,13 @@ namespace StoreWS.Service
             };
 
             return products;
+        }
+
+        public Product Get(Guid id)
+        {
+            var products = Get();
+
+            return products.FirstOrDefault(x => x.ProductId == id);
         }
     }
 }

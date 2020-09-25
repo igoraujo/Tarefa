@@ -8,53 +8,62 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Store.Web.StoreWS {
-    
-    
+namespace Store.Web.StoreWS
+{
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StoreWS.ServiceSoap")]
-    public interface ServiceSoap {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Example", ReplyAction="*")]
-        void Example();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Example", ReplyAction="*")]
-        System.Threading.Tasks.Task ExampleAsync();
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "StoreWS.ServiceSoap")]
+    public interface ServiceSoap
+    {
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/ImportFile", ReplyAction = "*")]
+        void ImportFile(string filePath);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/ImportFile", ReplyAction = "*")]
+        System.Threading.Tasks.Task ImportFileAsync(string filePath);
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ServiceSoapChannel : Store.Web.StoreWS.ServiceSoap, System.ServiceModel.IClientChannel {
+    public interface ServiceSoapChannel : Store.Web.StoreWS.ServiceSoap, System.ServiceModel.IClientChannel
+    {
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceSoapClient : System.ServiceModel.ClientBase<Store.Web.StoreWS.ServiceSoap>, Store.Web.StoreWS.ServiceSoap {
-        
-        public ServiceSoapClient() {
+    public partial class ServiceSoapClient : System.ServiceModel.ClientBase<Store.Web.StoreWS.ServiceSoap>, Store.Web.StoreWS.ServiceSoap
+    {
+
+        public ServiceSoapClient()
+        {
         }
-        
-        public ServiceSoapClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+
+        public ServiceSoapClient(string endpointConfigurationName) :
+                base(endpointConfigurationName)
+        {
         }
-        
-        public ServiceSoapClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public ServiceSoapClient(string endpointConfigurationName, string remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public ServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public ServiceSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+
+        public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(binding, remoteAddress)
+        {
         }
-        
-        public void Example() {
-            base.Channel.Example();
+
+        public void ImportFile(string filePath)
+        {
+            base.Channel.ImportFile(filePath);
         }
-        
-        public System.Threading.Tasks.Task ExampleAsync() {
-            return base.Channel.ExampleAsync();
+
+        public System.Threading.Tasks.Task ImportFileAsync(string filePath)
+        {
+            return base.Channel.ImportFileAsync(filePath);
         }
     }
 }

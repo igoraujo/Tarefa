@@ -2,6 +2,6 @@
 {
     public interface IImportService
     {
-        void Example();
+        void ImportFile(string filePath);
     }
 }
