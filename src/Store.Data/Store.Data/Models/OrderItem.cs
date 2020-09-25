@@ -8,7 +8,10 @@ namespace Store.Data.Models
 {
     public class OrderItem
     {
-        public OrderItem() { }
+        public OrderItem()
+        {
+            Products = new List<Product>();
+        }
 
         public Guid OrderItemId { get; set; }
         public Guid OrderId { get; set; }
